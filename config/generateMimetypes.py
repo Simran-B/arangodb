@@ -18,60 +18,6 @@ def wrap(string, width=80, ind1=0, ind2=0, prefix=''):
   return newstring + string
 
 
-# generate javascript file from mimetypes
-def genJsFile(types):
-  jslint = "/*jslint indent: 2,\n"\
-           "         nomen: true,\n"\
-           "         maxlen: 100,\n"\
-           "         sloppy: true,\n"\
-           "         vars: true,\n"\
-           "         white: true,\n"\
-           "         plusplus: true */\n"\
-           "/*global exports */\n\n"
-
-  out = jslint \
-      + prologue\
-      + "exports.mimeTypes = {\n"
-  
-  extensions = { }
-  # print individual mimetypes
-  i = 0
-  for t in types:
-    extension = t[0]
-    mimetype = t[1]
-    out = out + "  \"" + extension + "\": [ \"" + mimetype + "\", " + t[2] + " ]"
-
-    if not mimetype in extensions:
-      extensions[mimetype] = [ ]
-
-    extensions[mimetype].append(extension)
-    i = i + 1 
-
-    if i < len(types):
-      out = out + ", \n"
-    else:
-      out = out + "\n"
-
-  out = out + "};\n\n"
-
-  # print extensions
-  out = out + "exports.extensions = {\n"
-  i = 0
-  for e in extensions:
-
-    out = out + "  \"" + e + "\": [ \"" + "\", \"".join(extensions[e]) + "\" ]"
-    i = i + 1 
-
-    if i < len(extensions):
-      out = out + ", \n"
-    else:
-      out = out + "\n"
-      
-  out = out + "};\n\n"
-
-  return out
-
-
 # generate C header file from errors
 def genCHeaderFile(types):
   header = "\n"\
@@ -156,9 +102,7 @@ if extension == ".tmp":
   filename = os.path.splitext(outfile)[0]
   extension = os.path.splitext(filename)[1]
 
-if extension == ".js":
-  out = genJsFile(types)
-elif extension == ".h":
+if extension == ".h":
   out = genCHeaderFile(types)
 elif extension == ".cpp":
   out = genCFile(types, filename)

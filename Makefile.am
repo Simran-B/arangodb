@@ -334,17 +334,13 @@ if ENABLE_MAINTAINER_MODE
 
 BUILT_SOURCES += \
 	@top_srcdir@/lib/Basics/voc-mimetypes.h \
-	@top_srcdir@/lib/Basics/voc-mimetypes.cpp \
-	@top_srcdir@/js/common/modules/@arangodb/mimetypes.js
+	@top_srcdir@/lib/Basics/voc-mimetypes.cpp
 
 @top_srcdir@/lib/Basics/voc-mimetypes.h: lib/Basics/mimetypes.dat
 	@top_srcdir@/config/build_mimetypes.sh @top_srcdir@/config/generateMimetypes.py lib/Basics/mimetypes.dat @top_srcdir@/lib/Basics/voc-mimetypes.h
 
 @top_srcdir@/lib/Basics/voc-mimetypes.cpp: lib/Basics/mimetypes.dat
 	@top_srcdir@/config/build_mimetypes.sh @top_srcdir@/config/generateMimetypes.py lib/Basics/mimetypes.dat @top_srcdir@/lib/Basics/voc-mimetypes.cpp
-
-@top_srcdir@/js/common/modules/@arangodb/mimetypes.js: lib/Basics/mimetypes.dat
-	@top_srcdir@/config/build_mimetypes.sh @top_srcdir@/config/generateMimetypes.py lib/Basics/mimetypes.dat js/common/modules/@arangodb/mimetypes.js
 
 endif
 
@@ -372,8 +368,7 @@ superclean: distclean
 
 built-sources: \
 	build.h \
-	@top_srcdir@/js/common/bootstrap/errors.js \
-	@top_srcdir@/js/common/modules/@arangodb/mimetypes.js
+	@top_srcdir@/js/common/bootstrap/errors.js
 
 ################################################################################
 ### @brief tags file

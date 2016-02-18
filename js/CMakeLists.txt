@@ -20,7 +20,6 @@ list (APPEND JAVASCRIPT_BROWSER
 	js/apps/system/_admin/aardvark/APP/frontend/js/modules/common/@arangodb/aql/explainer.js
 	js/apps/system/_admin/aardvark/APP/frontend/js/modules/common/@arangodb/aql/functions.js
 	js/apps/system/_admin/aardvark/APP/frontend/js/modules/client/@arangodb/aql/queries.js
-	js/apps/system/_admin/aardvark/APP/frontend/js/modules/common/@arangodb/mimetypes.js
 	js/apps/system/_admin/aardvark/APP/frontend/js/modules/client/@arangodb/replication.js
 	js/apps/system/_admin/aardvark/APP/frontend/js/modules/common/@arangodb/simple-query-common.js
 	
