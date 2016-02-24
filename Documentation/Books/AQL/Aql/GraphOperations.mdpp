@@ -583,7 +583,7 @@ vertices (see [example](#short-explanation-of-the-example-parameter)).
 * *connectName*        : The result attribute which
  contains the connection.
 * *options* (optional) : An object containing options, see
- [Graph Traversals](../Aql/GraphOperations.md#graphtraversal):
+ [Graph Traversals](GraphOperations.md#graphtraversal):
 
 
 **Examples**

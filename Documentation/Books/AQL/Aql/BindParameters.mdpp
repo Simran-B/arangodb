@@ -24,7 +24,7 @@ letter, digit or the underscore symbol.
 
 Bind variables represent a value like a string, and must not be put in quotes.
 If you need to do string processing (concatenation, etc.) in the AQL query, you need
-[to use string functions to do so](../Aql/StringFunctions.md):
+[to use string functions to do so](StringFunctions.md):
 
     FOR u IN users
       FILTER u.id == CONCAT('prefix', @id, 'suffix') && u.name == @name
