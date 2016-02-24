@@ -24,6 +24,8 @@ var documentationSourceDirs = [
   fs.join(fs.makeAbsolute(''), "js/server"),
   fs.join(fs.makeAbsolute(''), "js/apps/system/_api/gharial/APP"),
   fs.join(fs.makeAbsolute(''), "Documentation/Books/Users"),
+  fs.join(fs.makeAbsolute(''), "Documentation/Books/AQL"),
+  fs.join(fs.makeAbsolute(''), "Documentation/Books/HTTP"),
   fs.join(fs.makeAbsolute(''), "arangod/RestHandler"),
   fs.join(fs.makeAbsolute(''), "arangod/V8Server")];
 

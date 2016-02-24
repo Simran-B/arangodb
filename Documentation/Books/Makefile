@@ -231,7 +231,7 @@ check-docublocks:
 	fi
 
 clean-intermediate:
-	make clean-book-intermediate NAME=Users FILTER=$(FILTER)
+	make clean-book-intermediate NAME=$(NAME) FILTER=$(FILTER)
 
 
 clean: clean-intermediate
@@ -243,6 +243,13 @@ clean: clean-intermediate
 build-books-keep-md:
 	@test -d books || mkdir books
 	python ../Scripts/codeBlockReader.py
-	make build-book NAME=Users
+	make build-book NAME=$(NAME)
 
-build-books: clean-intermediate build-books-keep-md check-docublocks
+build-books:   
+	make clean-intermediate NAME=Users
+	make clean-intermediate NAME=AQL
+	make clean-intermediate NAME=HTTP
+	make build-books-keep-md NAME=Users
+	make build-books-keep-md NAME=AQL
+	make build-books-keep-md NAME=HTTP
+	make check-docublocks
