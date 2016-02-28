@@ -145,18 +145,18 @@ build-book:
 
 	test -d books/$(NAME) || mkdir -p books/$(NAME)
 
-	make check-summary
-	make book-check-leftover-docublocks
-	make book-check-restheader-leftovers
-	make book-check-mdpp-leftovers
-	make ppbook-check-html-link
-	make ppbook-check-directory-link
+	#make check-summary
+	#make book-check-leftover-docublocks
+	#make book-check-restheader-leftovers
+	#make book-check-mdpp-leftovers
+	#make ppbook-check-html-link
+	#make ppbook-check-directory-link
 
 	cd ppbooks/$(NAME) && gitbook install
 	cd ppbooks/$(NAME) && gitbook build ./ ./../../books/$(NAME)
 	python ../Scripts/deprecated.py
 
-	make book-check-markdown-leftovers
+	#make book-check-markdown-leftovers
 
 clean-book:
 	@rm -rvf books/$(NAME)

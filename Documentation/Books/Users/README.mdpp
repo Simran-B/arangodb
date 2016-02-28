@@ -27,6 +27,16 @@ Key features include:
 * **Replication** and **Sharding**: set up the database in a master-slave configuration or spread bigger datasets across multiple servers
 * It is **open source** (Apache License 2.0)
 
+For more in-depth information:
+
+* Read more on the 
+  [Design Goals](https://www.arangodb.com/2012/03/07/avocadodbs-design-objectives) 
+  of ArangoDB
+* [Watch the video](http://vimeo.com/36411892): Martin Schönert, 
+  architect of ArangoDB, gives an introduction of what the ArangoDB project 
+  is about
+* Or give it a [try](https://www.arangodb.com/tryitout) !TODO new link? redirects to tutorials
+
 In this documentation you can inform yourself about all the functions, features and programs ArangoDB provides for you.
 Features are illustrated with interactive usage examples; you can cut'n'paste them into [arangosh](Arangosh/README.md) to try them out.
 The http REST-API is demonstrated with cut'n'paste recepies intended to be used with the [cURL](http://curl.haxx.se).
