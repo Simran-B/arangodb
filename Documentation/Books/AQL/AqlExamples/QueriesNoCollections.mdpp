@@ -37,3 +37,7 @@ FOR year in [ 2011, 2012, 2013 ]
   { "y" : "year", "q" : 4, "nice" : "4/2013" } 
 ]
 ```
+
+!TODO add example inline documents (objects)
+
+!TODO add example on how to use FOR, FILTER, COLLECT on array

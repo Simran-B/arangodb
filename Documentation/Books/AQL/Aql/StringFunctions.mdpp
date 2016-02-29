@@ -81,8 +81,8 @@ For string processing, AQL offers the following functions:
 
 - *TRIM(value, chars)*: Returns the string *value* with whitespace stripped 
   from the start and end. The optional *chars* parameter can be used to override the
-  characters that should be removed from the string. It defaults to `\r\n\t `
-  (i.e. `0x0d`, `0x0a`, `0x09` and `0x20`).
+  characters that should be removed from the string. It defaults to `\r\n \t`
+  (i.e. `0x0d`, `0x0a`, `0x20` and `0x09`).
 
       /* "foobar" */
       TRIM("  foobar\t \r\n ")         

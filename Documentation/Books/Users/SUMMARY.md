@@ -1,5 +1,6 @@
 
-# Summary 
+# Summary
+
 #* [First Steps](FirstSteps/README.md)
 #  * [Getting Familiar](FirstSteps/GettingFamiliar.md)
 * [Getting Started](GettingStarted/README.md)
@@ -16,8 +17,10 @@
   * [Your first queries](GettingStarted/AqlQueries.md)
   * [Coming from SQL](GettingStarted/ComingFromSql.md)
   * [Coming from MongoDB](GettingStarted/ComingFromMongoDb.md)
+
 * [Scalability](Scalability/README.md)
   * [Joins](Scalability/Joins.md)
+
 * [Data model & modeling](DataModeling/README.md)
 #* [Collections](FirstSteps/CollectionsAndDocuments.md)
   * [Concepts](DataModeling/Concepts.md)
@@ -38,13 +41,14 @@
     * [Document Keys](DataModeling/NamingConventions/DocumentKeys.md)
     * [Attribute Names](DataModeling/NamingConventions/AttributeNames.md)
   * [Modeling Relationships](DataModeling/ModelingRelationships.md)
-# Best practice? (Date handling, Versioning / Revisions
-# Add a fake chapter for AQL to go to the AQL docs?
-#* [AQL query language](Aql/README.md)
-#  * [10-minutes guide](Aql/TenMinutesGuide.md)
-#  * [Using Joins in AQL](Aql/UsingJoins.md)
-#  * [Dynamic attribute names](Aql/DynamicAttributes.md)
-# ...
+  # Best practice? (Date handling, Versioning / Revisions
+  # Add a fake chapter for AQL to go to the AQL docs?
+  #* [AQL query language](Aql/README.md)
+  #  * [10-minutes guide](Aql/TenMinutesGuide.md)
+  #  * [Using Joins in AQL](Aql/UsingJoins.md)
+  #  * [Dynamic attribute names](Aql/DynamicAttributes.md)
+  # ...
+
 * [Indexing](Indexing/README.md)
   * [Index Basics](Indexing/IndexBasics.md)
   * [Which Index to use when](Indexing/WhichIndex.md)
@@ -55,12 +59,7 @@
     * [Fulltext Indexes](Indexing/Fulltext.md)
     * [Geo Indexes](Indexing/Geo.md)
     * [Cap Constraint](Indexing/Cap.md)
-* [Transactions](Transactions/README.md)
-  * [Transaction invocation](Transactions/TransactionInvocation.md)
-  * [Passing parameters](Transactions/Passing.md)
-  * [Locking and isolation](Transactions/LockingAndIsolation.md)
-  * [Durability](Transactions/Durability.md)
-  * [Limitations](Transactions/Limitations.md)
+
 * [Graphs](Graphs/README.md)
   * [General Graphs](Graphs/GeneralGraphs/README.md)
     * [Graph Management](Graphs/GeneralGraphs/Management.md)
@@ -70,6 +69,8 @@
     * [Using Traversal Objects](Graphs/Traversals/UsingTraversalObjects.md)
     * [Example Data](Graphs/Traversals/ExampleData.md)
   * [Working with Edges](Graphs/Edges/README.md)
+
+# Will be replaced by new FOTF docs
 * [Foxx microservices](Foxx/README.md)
   * [In a nutshell](Foxx/Nutshell/README.md)
   * [Install](Foxx/Install/README.md)
@@ -100,23 +101,24 @@
   * [Cluster](Foxx/Cluster/README.md)
     * [Install](Foxx/Cluster/Install.md)
     * [Setup & Teardown](Foxx/Cluster/Scripts.md)
-  * [JavaScript Modules](Foxx/Modules/README.md)
-    * ["console"](Foxx/Modules/Console.md)
-    * ["fs"](Foxx/Modules/FS.md)
-    * ["process"](Foxx/Modules/Process.md)
-    * ["request"](Foxx/Modules/Request.md)
-    * ["actions"](Foxx/Modules/Actions.md)
-    * ["queries"](Foxx/Modules/Queries.md)
-    * ["planner"](Foxx/Modules/Planner.md)
-    * [Write-ahead log](Foxx/Modules/WAL.md)
-    * [Task Management](Foxx/Modules/Tasks.md)
+* [Transactions](Transactions/README.md)
+  * [Transaction invocation](Transactions/TransactionInvocation.md)
+  * [Passing parameters](Transactions/Passing.md)
+  * [Locking and isolation](Transactions/LockingAndIsolation.md)
+  * [Durability](Transactions/Durability.md)
+  * [Limitations](Transactions/Limitations.md)
+
 # Use cases / Advanced usage / Best practice (?)
+
 * [Administration](Administration/README.md)
-  * [The ArangoDB Shell](Administration/Arangosh/README.md)
+  * [ArangoDB Shell](Administration/Arangosh/README.md)
     * [Shell Output](Administration/Arangosh/Output.md)
     * [Configuration](Administration/Arangosh/Configuration.md)
-	# relocate file?
+    # relocate file?
     * [Details](GettingStarted/Arangosh.md)
+  * [Arangoimp](Administration/Arangoimp.md)
+  * [Arangodump](Administration/Arangodump.md)
+  * [Arangorestore](Administration/Arangorestore.md)
   * [Upgrading](Administration/Upgrading/README.md)
     * [Upgrading to 2.8](Administration/Upgrading/Upgrading28.md)
     * [Upgrading to 2.6](Administration/Upgrading/Upgrading26.md)
@@ -164,6 +166,7 @@
   * [Whats New in 2.3](ReleaseNotes/NewFeatures23.md)
   * [Whats New in 2.2](ReleaseNotes/NewFeatures22.md)
   * [Whats New in 2.1](ReleaseNotes/NewFeatures21.md)
+  # Place next to Upgrading instead?
   * [Incompatible changes in 2.8](ReleaseNotes/UpgradingChanges28.md)
   * [Incompatible changes in 2.7](ReleaseNotes/UpgradingChanges27.md)
   * [Incompatible changes in 2.6](ReleaseNotes/UpgradingChanges26.md)
@@ -172,18 +175,33 @@
   * [Incompatible changes in 2.3](ReleaseNotes/UpgradingChanges23.md)
 
 * [Appendix](Appendix/README.md)
+  # Add deprecation note
+  * [Simple Queries](Appendix/SimpleQueries/README.md)
+    * [Sequential Access](Appendix/SimpleQueries/Access.md)
+    * [Pagination](Appendix/SimpleQueries/Pagination.md)
+    * [Modification Queries](Appendix/SimpleQueries/ModificationQueries.md)
+    * [Geo Queries](Appendix/SimpleQueries/GeoQueries.md)
+    * [Fulltext Queries](Appendix/SimpleQueries/FulltextQueries.md)
+  # Add deprecation note
+  * [Actions](Appendix/Actions/README.md)
+    * [Delivering HTML Pages](Appendix/Actions/HtmlExample.md)
+    * [Json Objects](Appendix/Actions/JsonExample.md)
+    * [Modifying](Appendix/Actions/Modifying.md)
+  # Link here from arangosh, actions, foxx, transactions
+  * [JavaScript Modules](Appendix/Modules/README.md)
+    * ["console"](Appendix/Modules/Console.md)
+    * ["fs"](Appendix/Modules/FS.md)
+    * ["process"](Appendix/Modules/Process.md)
+    * ["request"](Appendix/Modules/Request.md)
+    * ["actions"](Appendix/Modules/Actions.md)
+    * ["queries"](Appendix/Modules/Queries.md)
+    * ["planner"](Appendix/Modules/Planner.md)
+    * [Write-ahead log](Appendix/Modules/WAL.md)
+    * [Task Management](Appendix/Modules/Tasks.md)
   * [Error codes and meanings](Appendix/ErrorCodes/README.md)
   * [Glossary](Appendix/Glossary/README.md)
 
-#* [Simple Queries](SimpleQueries/README.md)
-#  * [Sequential Access](SimpleQueries/Access.md)
-#  * [Pagination](SimpleQueries/Pagination.md)
-#  * [Modification Queries](SimpleQueries/ModificationQueries.md)
-#  * [Geo Queries](SimpleQueries/GeoQueries.md)
-#  * [Fulltext Queries](SimpleQueries/FulltextQueries.md)
-#* [ArangoDB's Actions](ArangoActions/README.md)
-#  * [Delivering HTML Pages](ArangoActions/HtmlExample.md)
-#  * [Json Objects](ArangoActions/JsonExample.md)
-#  * [Modifying](ArangoActions/Modifying.md)
+# Move to maintainer readme
 #* [Using jsUnity](UsingJsUnity/README.md)
+
 #* [Advanced](Advanced/README.md)

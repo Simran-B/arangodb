@@ -127,6 +127,10 @@ These tests are ran using the jasmine framework instead of jsunity.
 --------
 These tests produce a certain thread on infrastructure or the test system, and therefore should only be executed once per day.
 
+ArangoDB contains a wrapper for [jsUnity](http://jsunity.com/), a
+lightweight universal JavaScript unit testing framework.
+
+
 Test frameworks used
 ====================
 There are several major places where unittests live: 
@@ -144,6 +148,34 @@ HttpInterface - RSpec Client Tests
 ---------------------------------
 These tests work on the plain RESTfull interface of arangodb, and thus also test invalid HTTP-requests and so forth, plus check error handling in the server.
 
+Running jsUnity tests
+---------------------
+Assume that you have a test file containing
+
+```js
+function exampleTestSuite () {
+  return {
+    testSizeOfTestCollection : function () {
+    assertEqual(5, 5);
+  };
+}
+
+jsUnity.run(aqlTestSuite);
+
+return jsunity.done();
+```
+
+Then you can run the test suite using *jsunity.runTest*
+
+```
+arangosh> require("jsunity").runTest("test.js");
+2012-01-28T19:10:23Z [10671] INFO Running aqlTestSuite
+2012-01-28T19:10:23Z [10671] INFO 1 test found
+2012-01-28T19:10:23Z [10671] INFO [PASSED] testSizeOfTestCollection
+2012-01-28T19:10:23Z [10671] INFO 1 test passed
+2012-01-28T19:10:23Z [10671] INFO 0 tests failed
+2012-01-28T19:10:23Z [10671] INFO 1 millisecond elapsed
+```
 
 jsUnity on arangod
 ------------------

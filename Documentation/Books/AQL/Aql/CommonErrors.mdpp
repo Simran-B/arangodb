@@ -1,0 +1,9 @@
+!CHAPTER Common errors
+
+!TODO rename to Error sources and include article about parameter injection from cookbook?
+
+!TODO Also check if https://github.com/arangodb/arangodb/issues/1634#issuecomment-167808660 can be included
+
+!TODO "foo" + "bar" instead of CONCAT("foo", "bar")
+
+!TODO FITLER doc.attr or FILTER doc.attr != null instead of FILTER HAS(doc, "attr")

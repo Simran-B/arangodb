@@ -16,3 +16,10 @@ supported:
 - *POW(base, exp)*: Returns the *base* to the exponent *exp*
 
 - *RAND()*: Returns a pseudo-random number between 0 and 1
+
+Rounding towards zero (also known as `trunc()`) can be achieved with a combination
+of the [ternary operator](Operators.md#ternary-operator), `CEIL()` and `FLOOR()`:
+
+```
+LET rounded = value >= 0 ? FLOOR(value) : CEIL(value)
+```

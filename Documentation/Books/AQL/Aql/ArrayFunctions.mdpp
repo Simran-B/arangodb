@@ -257,4 +257,5 @@ AQL supports the following functions to operate on array values:
 
 Apart from these functions, AQL also offers several language constructs: 
 - [array operators](ArrayOperators.md) for array expansion and contraction, 
+- [array comparison operators](Operators.md#array-comparison-operators) to compare each element in an array to a value, another array etc. and 
 - operations for array manipulations like [FOR](../AqlOperations/For.md), [SORT](../AqlOperations/Sort.md), [LIMIT](../AqlOperations/Limit.md), [COLLECT](../AqlOperations/Collect.md). 
