@@ -175,6 +175,16 @@
   * [Incompatible changes in 2.3](ReleaseNotes/UpgradingChanges23.md)
 
 * [Appendix](Appendix/README.md)
+  * [JavaScript Modules](Appendix/Modules/README.md)
+    * ["console"](Appendix/Modules/Console.md)
+    * ["fs"](Appendix/Modules/FS.md)
+    * ["process"](Appendix/Modules/Process.md)
+    * ["request"](Appendix/Modules/Request.md)
+    * ["actions"](Appendix/Modules/Actions.md)
+    * ["queries"](Appendix/Modules/Queries.md)
+    * ["planner"](Appendix/Modules/Planner.md)
+    * [Write-ahead log](Appendix/Modules/WAL.md)
+    * [Task Management](Appendix/Modules/Tasks.md)
   # Add deprecation note
   * [Simple Queries](Appendix/SimpleQueries/README.md)
     * [Sequential Access](Appendix/SimpleQueries/Access.md)
@@ -188,16 +198,6 @@
     * [Json Objects](Appendix/Actions/JsonExample.md)
     * [Modifying](Appendix/Actions/Modifying.md)
   # Link here from arangosh, actions, foxx, transactions
-  * [JavaScript Modules](Appendix/Modules/README.md)
-    * ["console"](Appendix/Modules/Console.md)
-    * ["fs"](Appendix/Modules/FS.md)
-    * ["process"](Appendix/Modules/Process.md)
-    * ["request"](Appendix/Modules/Request.md)
-    * ["actions"](Appendix/Modules/Actions.md)
-    * ["queries"](Appendix/Modules/Queries.md)
-    * ["planner"](Appendix/Modules/Planner.md)
-    * [Write-ahead log](Appendix/Modules/WAL.md)
-    * [Task Management](Appendix/Modules/Tasks.md)
   * [Error codes and meanings](Appendix/ErrorCodes/README.md)
   * [Glossary](Appendix/Glossary/README.md)
 

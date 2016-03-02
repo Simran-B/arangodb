@@ -157,10 +157,10 @@ AQL supports the following arithmetic operators:
 
 The unary plus and unary minus are supported as well.
 
-For exponentiation there is a (numeric function)[NumericFunctions.md#POW] `POW()`.
+For exponentiation there is a [numeric function](NumericFunctions.md#pow( `POW()`.
 
-For string concatenation, you must use the (string function)[StringFunctions.md#CONCAT] `CONCAT()`.
-Combining two strings with a plus operator (`"foo" + "bar"`) will not work!
+For string concatenation, you must use the [string function](StringFunctions.md#concat) `CONCAT()`.
+Combining two strings with a plus operator (`"foo" + "bar"`) will not work! Also see [common errors](CommonErrors.md).
 
 Some example arithmetic operations:
 

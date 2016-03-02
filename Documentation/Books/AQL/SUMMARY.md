@@ -19,7 +19,7 @@
   * [SORT](AqlOperations/Sort.md)
   * [LIMIT](AqlOperations/Limit.md)
   * [LET](AqlOperations/Let.md)
-  * [COLLECt](AqlOperations/Collect.md)
+  * [COLLECT](AqlOperations/Collect.md)
   * [REMOVE](AqlOperations/Remove.md)
   * [UPDATE](AqlOperations/Update.md)
   * [REPLACE](AqlOperations/Replace.md)

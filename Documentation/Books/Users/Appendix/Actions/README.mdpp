@@ -1,5 +1,7 @@
 !CHAPTER ArangoDB's Actions
 
+!TODO add deprecation note
+
 !SUBSECTION Introduction to User Actions
 
 In some ways the communication layer of the ArangoDB server behaves like a Web

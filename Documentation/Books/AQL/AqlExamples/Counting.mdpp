@@ -3,7 +3,7 @@
 !SECTION Amount of documents in a collection
 
 To return the count of documents that currently exist in a collection,
-you can call the [LENGTH() function](../Aql/ArrayFunctions.md#LENGTH):
+you can call the [LENGTH() function](../Aql/ArrayFunctions.md#length):
 
 ```
 RETURN LENGTH(collection)
@@ -20,3 +20,5 @@ RETURN length
 ```
 
 !TODO add example on how to use FOR, FILTER, COLLECT on array here? (in combination with counting)
+
+!TODO mention that enumerating documents is not possible in a proper way
