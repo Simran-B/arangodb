@@ -199,7 +199,7 @@
     * [Modifying](Appendix/Actions/Modifying.md)
   # Link here from arangosh, actions, foxx, transactions
   * [Error codes and meanings](Appendix/ErrorCodes/README.md)
-  * [Glossary](Appendix/Glossary/README.md)
+  * [Glossary](Appendix/Glossary.md)
 
 # Move to maintainer readme
 #* [Using jsUnity](UsingJsUnity/README.md)
