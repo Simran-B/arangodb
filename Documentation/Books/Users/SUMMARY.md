@@ -1,6 +1,6 @@
-
+#
 # Summary
-
+#
 #* [First Steps](FirstSteps/README.md)
 #  * [Getting Familiar](FirstSteps/GettingFamiliar.md)
 * [Getting Started](GettingStarted/README.md)
@@ -17,10 +17,10 @@
   * [Your first queries](GettingStarted/AqlQueries.md)
   * [Coming from SQL](GettingStarted/ComingFromSql.md)
   * [Coming from MongoDB](GettingStarted/ComingFromMongoDb.md)
-
+#
 * [Scalability](Scalability/README.md)
   * [Joins](Scalability/Joins.md)
-
+#
 * [Data model & modeling](DataModeling/README.md)
 #* [Collections](FirstSteps/CollectionsAndDocuments.md)
   * [Concepts](DataModeling/Concepts.md)
@@ -48,7 +48,7 @@
   #  * [Using Joins in AQL](Aql/UsingJoins.md)
   #  * [Dynamic attribute names](Aql/DynamicAttributes.md)
   # ...
-
+#
 * [Indexing](Indexing/README.md)
   * [Index Basics](Indexing/IndexBasics.md)
   * [Which Index to use when](Indexing/WhichIndex.md)
@@ -59,7 +59,7 @@
     * [Fulltext Indexes](Indexing/Fulltext.md)
     * [Geo Indexes](Indexing/Geo.md)
     * [Cap Constraint](Indexing/Cap.md)
-
+#
 * [Graphs](Graphs/README.md)
   * [General Graphs](Graphs/GeneralGraphs/README.md)
     * [Graph Management](Graphs/GeneralGraphs/Management.md)
@@ -69,7 +69,7 @@
     * [Using Traversal Objects](Graphs/Traversals/UsingTraversalObjects.md)
     * [Example Data](Graphs/Traversals/ExampleData.md)
   * [Working with Edges](Graphs/Edges/README.md)
-
+#
 # Will be replaced by new FOTF docs
 * [Foxx microservices](Foxx/README.md)
   * [In a nutshell](Foxx/Nutshell/README.md)
@@ -107,9 +107,9 @@
   * [Locking and isolation](Transactions/LockingAndIsolation.md)
   * [Durability](Transactions/Durability.md)
   * [Limitations](Transactions/Limitations.md)
-
+#
 # Use cases / Advanced usage / Best practice (?)
-
+#
 * [Administration](Administration/README.md)
   * [ArangoDB Shell](Administration/Arangosh/README.md)
     * [Shell Output](Administration/Arangosh/Output.md)
@@ -145,18 +145,18 @@
     * [Implementation](Administration/Sharding/StatusOfImplementation.md)
     * [Authentication](Administration/Sharding/Authentication.md)
     * [Firewall setup](Administration/Sharding/FirewallSetup.md)
-  
+#
 * [Deployment](Deployment/README.md)
-
+#
 * [Troubleshooting](Troubleshooting/README.md)
   * [Emergency Console](Troubleshooting/EmergencyConsole.md)
   * [Datafile Debugger](Troubleshooting/DatafileDebugger.md)
   * [Arangob](Troubleshooting/Arangob.md)
-  
+#
 * [Architecture](Architecture/README.md)
   * [Write-ahead log](Architecture/WriteAheadLog.md)
   * [Server Internals](Architecture/ServerInternals.md)
-  
+#
 * [Release notes](ReleaseNotes/README.md)
   * [Whats New in 2.8](ReleaseNotes/NewFeatures28.md)
   * [Whats New in 2.7](ReleaseNotes/NewFeatures27.md)
@@ -173,7 +173,7 @@
   * [Incompatible changes in 2.5](ReleaseNotes/UpgradingChanges25.md)
   * [Incompatible changes in 2.4](ReleaseNotes/UpgradingChanges24.md)
   * [Incompatible changes in 2.3](ReleaseNotes/UpgradingChanges23.md)
-
+#
 * [Appendix](Appendix/README.md)
   * [JavaScript Modules](Appendix/Modules/README.md)
     * ["console"](Appendix/Modules/Console.md)
@@ -200,8 +200,8 @@
   # Link here from arangosh, actions, foxx, transactions
   * [Error codes and meanings](Appendix/ErrorCodes/README.md)
   * [Glossary](Appendix/Glossary.md)
-
+#
 # Move to maintainer readme
 #* [Using jsUnity](UsingJsUnity/README.md)
-
+#
 #* [Advanced](Advanced/README.md)

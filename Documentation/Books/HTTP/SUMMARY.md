@@ -8,7 +8,7 @@
   * [Notes on Databases](Database/NotesOnDatabases.md)
 * [Documents](Document/README.md)
   * [Address and ETag](Document/AddressAndEtag.md)
-  * [Working with](Document/WorkingWithDocuments.md)
+  * [Working with Documents](Document/WorkingWithDocuments.md)
 * [Edges](Edge/README.md)
   * [Address and ETag](Edge/AddressAndEtag.md)
   * [Working with Edges](Edge/WorkingWithEdges.md)
