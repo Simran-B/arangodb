@@ -7,7 +7,7 @@
   * [Management](Database/DatabaseManagement.md)
   * [Notes on Databases](Database/NotesOnDatabases.md)
 * [Documents](Document/README.md)
-  * [Address and ETag](Document/AddressAndEtag.md)
+  * [Basics and Terminology](Document/AddressAndEtag.md)
   * [Working with Documents](Document/WorkingWithDocuments.md)
 * [Edges](Edge/README.md)
   * [Address and ETag](Edge/AddressAndEtag.md)
