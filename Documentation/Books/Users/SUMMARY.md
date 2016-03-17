@@ -31,7 +31,7 @@
     * [Collection Methods](DataModeling/Collections/CollectionMethods.md)
     * [Database Methods](DataModeling/Collections/DatabaseMethods.md)
   * [Documents](DataModeling/Documents/README.md)
-    * [Address and ETag](DataModeling/Documents/DocumentAddress.md)
+    * [Basics and Terminology](DataModeling/Documents/DocumentAddress.md)
     * [Collection Methods](DataModeling/Documents/DocumentMethods.md)
     * [Database Methods](DataModeling/Documents/DatabaseMethods.md)
   * [Graphs, Vertices & Edges](DataModeling/GraphsVerticesEdges.md)
