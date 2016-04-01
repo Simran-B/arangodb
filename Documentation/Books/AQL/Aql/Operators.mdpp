@@ -157,7 +157,7 @@ AQL supports the following arithmetic operators:
 
 The unary plus and unary minus are supported as well.
 
-For exponentiation there is a [numeric function](NumericFunctions.md#pow( `POW()`.
+For exponentiation, there is a [numeric function](NumericFunctions.md#pow) `POW()`.
 
 For string concatenation, you must use the [string function](StringFunctions.md#concat) `CONCAT()`.
 Combining two strings with a plus operator (`"foo" + "bar"`) will not work! Also see [common errors](CommonErrors.md).
@@ -174,7 +174,7 @@ Some example arithmetic operations:
 
 The arithmetic operators accept operands of any type. This behavior has changed in 
 ArangoDB 2.3. Passing non-numeric values to an arithmetic operator is now allow.
-Any-non numeric operands will be casted to numbers implicitly by the operator,
+All non-numeric operands will be casted to numbers implicitly by the operator,
 without making the query abort. 
 
 The *conversion to a numeric value* works as follows:

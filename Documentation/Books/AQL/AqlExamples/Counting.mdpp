@@ -15,7 +15,8 @@ In earlier versions with `COLLECT ... WITH COUNT INTO` available (since 2.4),
 you may use the following code for better performance instead:
 
 ```
-FOR doc IN collection COLLECT WITH COUNT INTO length
+FOR doc IN collection
+COLLECT WITH COUNT INTO length
 RETURN length
 ```
 
