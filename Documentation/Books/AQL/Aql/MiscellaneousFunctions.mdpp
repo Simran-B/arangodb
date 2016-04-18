@@ -2,52 +2,116 @@
 
 AQL offers the following functions to let the user control the flow of operations:
 
-- *NOT_NULL(alternative, ...)*: Returns the first alternative that is not *null*, 
-  and *null* if all alternatives are *null* themselves
+!SUBSUBSECTION NOT_NULL()
 
-- *FIRST_LIST(alternative, ...)*: Returns the first alternative that is an array, and
-  *null* if none of the alternatives is an array
+`NOT_NULL(alternative, ...) → value`
 
-- *FIRST_DOCUMENT(alternative, ...)*: Returns the first alternative that is a document,
-  and *null* if none of the alternatives is a document
+Returns the first alternative that is not *null*, and *null* if all alternatives
+are *null* themselves.
+
+- **alternative** (any, *repeatable*): input of arbitrary type
+- returns **value** (any): 
+
+!SUBSUBSECTION FIRST_LIST()
+
+`FIRST_LIST(alternative, ...) → list`
+
+Returns the first alternative that is an array, and *null* if none of the
+alternatives is an array.
+
+- **alternative** (any, *repeatable*): input of arbitrary type
+- returns **list** (list|null): array / list or null
+
+!SUBSUBSECTION FIRST_DOCUMENT()
+
+`FIRST_DOCUMENT(value) → doc`
+
+Returns the first alternative that is a document, and *null* if none of the
+alternatives is a document.
+
+- **alternative** (any, *repeatable*): input of arbitrary type
+- returns **doc** (object|null): document / object or null
+
+!SUBSUBSECTION Ternary operator
+
+For conditional evaluation, check out the
+[ternary operator](../Aql/Operators.md#ternary-operator).
 
 !SECTION Miscellaneous functions
 
-Finally, AQL supports the following functions that do not belong to any of the other
-function categories:
+Finally, AQL supports the following functions that do not belong to any of
+the other function categories:
 
-- *COLLECTIONS()*: Returns an array of collections. Each collection is returned as a document
-  with attributes *name* and *_id*
+!SUBSUBSECTION COLLECTIONS()
 
-- *CURRENT_USER()*: Returns the name of the current user. The current user is the user 
-  account name that was specified in the *Authorization* HTTP header of the request. It will
-  only be populated if authentication on the server is turned on, and if the query was executed
-  inside a request context. Otherwise, the return value of this function will be *null*.
+`COLLECTIONS() → array`
 
-- *DOCUMENT(collection, id)*: Returns the document which is uniquely identified by
-  the *id*. ArangoDB will try to find the document using the *_id* value of the document
-  in the specified collection. If there is a mismatch between the *collection* passed and
-  the collection specified in *id*, then *null* will be returned. Additionally, if the
-  *collection* matches the collection value specified in *id* but the document cannot be
-  found, *null* will be returned. This function also allows *id* to be an array of ids.
-  In this case, the function will return an array of all documents that could be found. 
+Returns an array of collections. Each collection is returned as a document
+with attributes *name* and *_id*.
 
-*Examples*
-  
-      DOCUMENT(users, "users/john")
-      DOCUMENT(users, "john")
+- returns **array** (array): 
 
-      DOCUMENT(users, [ "users/john", "users/amy" ])
-      DOCUMENT(users, [ "john", "amy" ])
+!SUBSUBSECTION CURRENT_USER()
 
-  Note: The *DOCUMENT* function is polymorphic since ArangoDB 1.4. It can now be used with
-  a single parameter *id* as follows:
+Returns the name of the current user. The current user is the user  account
+name that was specified in the *Authorization* HTTP header of the request.
+It will only be populated if authentication on the server is turned on, and
+if the query was executed inside a request context. Otherwise, the return
+value of this function will be *null*.
 
-- *DOCUMENT(id)*: In this case, *id* must either be a document handle string
-  (consisting of collection name and document key) or an array of document handle strings, e.g.
+`CURRENT_USER() → user`
 
-      DOCUMENT("users/john")
-      DOCUMENT([ "users/john", "users/amy" ])
+- returns **user** (string): name of current user
+
+!SUBSUBSECTION DOCUMENT()
+
+`DOCUMENT(collection, id) → doc`
+
+Returns the document which is uniquely identified by the *id*. ArangoDB will
+try to find the document using the *_id* value of the document in the specified
+collection. If there is a mismatch between the *collection* passed and the
+collection specified in *id*, then *null* will be returned. Additionally,
+if the *collection* matches the collection value specified in *id* but the
+document cannot be found, *null* will be returned. This function also allows
+*id* to be an array of ids. In this case, the function will return an array
+of all documents that could be found. 
+
+- **collection** (string): name of a collection
+- **id** (string|array): either a document handle string (consisting of
+  collection name and document key) or an array of document handle strings
+- returns **doc** (document|null): content of document or *null*.
+
+!TODO id to ID, ids to IDs? Is _key also supported here?
+
+!SUBSUBSUBSECTION Examples
+
+```js
+DOCUMENT(users, "users/john")
+DOCUMENT(users, "john")
+
+DOCUMENT(users, [ "users/john", "users/amy" ])
+DOCUMENT(users, [ "john", "amy" ])
+```
+
+Note: The `DOCUMENT()` function is polymorphic since ArangoDB 1.4.
+It can now be used with a single parameter *id* as follows:
+
+`DOCUMENT(id) → doc`
+
+- **id** (string|array): either a document handle string (consisting of
+  collection name and document key) or an array of document handle strings
+- returns **doc** (document|null): content of document or *null*.
+
+```js
+DOCUMENT("users/john")
+DOCUMENT([ "users/john", "users/amy" ])
+```
+
+!TODO continue here!
+
+!SUBSUBSECTION CALL()
+
+`CALL(func, argN, ...) → doc`
 
 - *CALL(function, arg1, ..., argN)*: Dynamically calls the function with name *function*
   with the arguments specified. Both built-in and user-defined functions can be called. 
@@ -56,6 +120,11 @@ function categories:
       /* "this" */
       CALL('SUBSTRING', 'this is a test', 0, 4) 
 
+      !SUBSUBSECTION FIRST_DOCUMENT()
+
+`FIRST_DOCUMENT(value) → doc`
+
+
 - *APPLY(function, arguments)*: Dynamically calls the function with name *function* 
   with the arguments specified. Both built-in and user-defined functions can be called. 
   Arguments are passed as separate parameters to the called function.
@@ -63,3 +132,19 @@ function categories:
       /* "this is" */
       APPLY('SUBSTRING', [ 'this is a test', 0, 7 ]) 
 
+!SUBSUBSECTION COLLECTION_COUNT()
+
+`COLLECTION_COUNT(coll) → count`
+
+!SUBSUBSECTION NOOP()
+
+`NOOP(value) → doc`
+
+
+!SUBSUBSECTION FAIL()
+
+`FAIL(value) → doc`
+
+!SUBSUBSECTION V8()
+
+`V8(value) → doc`

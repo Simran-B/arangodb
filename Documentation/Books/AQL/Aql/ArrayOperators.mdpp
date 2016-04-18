@@ -73,6 +73,7 @@ FOR u IN users
 While producing a result with the <i>[\*]</i> operator, it is also possible
 to filter while iterating over the array, and to create a projection using the
 current array element.
+!TODO LIMIT is supported as well
 
 For example, to return only the names of friends that have an *age* value
 higher than the user herself an inline *FILTER* can be used:
@@ -119,6 +120,9 @@ The above will return:
 In order to collapse (or flatten) results in nested arrays, AQL provides the <i>[\*\*]</i> 
 operator. It works similar to the <i>[\*]</i> operator, but additionally collapses nested
 arrays. How many levels are collapsed is determined by the amount of <i>\*</i> characters used.
+<i>[\*\*]</i> collapses one level of nesting, like `FLATTEN(array)`, <i>[\*\*\*]</i> two
+levels, like`FLATTEN(array, 2)`, and so on.
+!TODO inline filter/limit/return also supported
 
 For example, the following query produces an array of friend names per user:
 
@@ -148,7 +152,7 @@ As we have multiple users, the overall result is a nested array:
 ```
 
 If the goal is to get rid of the nested array, we can apply the <i>[\*\*]</i> operator on the 
-result. Simplying appending <i>[\*\*]</i> to the query won't help, because *u.friends*
+result. Simply appending <i>[\*\*]</i> to the query won't help, because *u.friends*
 is not a nested (multi-dimensional) array, but a simple (one-dimensional) array. Still, 
 the <i>[\*\*]</i> can be used if it has access to a multi-dimensional nested result.
 

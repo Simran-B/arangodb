@@ -1,14 +1,14 @@
 !BOOK ArangoDB VERSION_NUMBER Documentation
 
-!TODO merge Introduction with Getting started top page?
-
 Welcome to the ArangoDB documentation!
 
-The documentation introduces ArangoDB for you as a user, developer and administrator and describes all of its functions in detail. 
+The documentation introduces ArangoDB for you as a user, developer and administrator and describes all of its functions in detail.
+
+New and eager to try it out? Start right away with our beginner's guide: [Getting Started](GettingStarted/README.md)
 
 !TODO explain structure of docs
 
-!TODO remove key-features section?
+!SUBSECTION What is ArangoDB?
 
 ArangoDB is a multi-model, open-source database with flexible data models for documents, graphs, and key-values. Build high performance applications using a convenient SQL-like query language or JavaScript extensions. Use ACID transactions if you require them. Scale horizontally and vertically with a few mouse clicks.
 
@@ -52,6 +52,7 @@ If you have questions regarding ArangoDB, Foxx, drivers, or this documentation d
 - [Github](https://github.com/arangodb/arangodb/issues) for issues and misbehavior or [pull requests](https://www.arangodb.com/community/)
 - [Google groups](https://groups.google.com/forum/?hl=de#!forum/arangodb) for discussions about ArangoDB in general or to announce your new Foxx App
 - [Stackoverflow](http://stackoverflow.com/questions/tagged/arangodb) for questions about AQL, usage scenarios etc.
+- [Slack](http://slack.arangodb.com), our community chat
 
 Please describe:
 
@@ -64,5 +65,4 @@ Please describe:
 - whats actually happening
 
 We will respond as soon as possible.
-
 
