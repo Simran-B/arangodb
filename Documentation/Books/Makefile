@@ -247,9 +247,5 @@ build-books-keep-md:
 
 build-books:   
 	make clean-intermediate NAME=Users
-	make clean-intermediate NAME=AQL
-	make clean-intermediate NAME=HTTP
 	make build-books-keep-md NAME=Users
-	make build-books-keep-md NAME=AQL
-	make build-books-keep-md NAME=HTTP
 	make check-docublocks
