@@ -92,11 +92,13 @@ body {
   margin-top: 48px;
 }
 
+/*
 .book-search,
 .toggle-search,
 .facebook-sharing-link {
   display: none !important;
 }
+*/
 
 .book .book-summary ul.summary li.active > a,
 .book .book-summary ul.summary li a:hover {
@@ -110,11 +112,14 @@ body {
 .toggle-search { visibility: hidden}
 */
 
+/*
 #spacer {
   margin-top: 40px;
 }
 
 #searchx { padding-left: 100;}
+
+*/
 
 #logo {
   display: block;
@@ -137,22 +142,24 @@ body {
   padding: 0 10px;
 }
 
-#header {
-  display: block;
+.header {
+  position: fixed;
   width: 100%;
   height: 48px;
-  background: #444;
+  z-index: 1;
 }
 
-#header .socialIcons-googlegroups a img {
+.header .socialIcons-googlegroups a img {
   position: relative;
   top: 3px;
 }
 
-#header .wrap,
-#header .wrap .clearfix {
+/*
+.header .wrap,
+.header .wrap .clearfix {
   max-height: 48px;
 }
+*/
 
 .absolute{
   position: absolute;
