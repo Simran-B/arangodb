@@ -4,7 +4,7 @@
   "author": "ArangoDB GmbH",
   "description": "Official AQL manual for ArangoDB - the multi-model NoSQL database",
   "language": "en",
-  "plugins":["-search", "toggle-chapters", "addcssjs", "heading-anchors", "toc"],
+  "plugins":["-search", "-sharing", "toggle-chapters", "addcssjs", "heading-anchors", "toc", "add-header"],
   "pdf": {
     "fontSize": 12,
     "toc": true,
