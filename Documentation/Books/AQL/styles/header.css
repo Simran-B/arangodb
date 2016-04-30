@@ -193,12 +193,8 @@ body {
   font-family: Roboto, Helvetica, sans-serif;
 }
 
-#navmenu li a:hover {
+#navmenu li a:hover, #navmenu li.active-tab a {
   background: #8aa051 !important;
-}
-
-.owntab {
-  background-color: #444444;
 }
 
 .arangodb_version {

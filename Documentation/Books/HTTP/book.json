@@ -4,7 +4,7 @@
   "author": "ArangoDB GmbH",
   "description": "Official HTTP API manual for ArangoDB - the multi-model NoSQL database",
   "language": "en",
-  "plugins":["-search", -"sharing", "toggle-chapters", "addcssjs", "heading-anchors", "toc", "add-header"],
+  "plugins":["-search", "-sharing", "toggle-chapters", "addcssjs", "heading-anchors", "toc", "add-header"],
   "pdf": {
     "fontSize": 12,
     "toc": true,

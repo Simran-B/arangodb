@@ -7,3 +7,5 @@
 !TODO "foo" + "bar" instead of CONCAT("foo", "bar")
 
 !TODO FITLER doc.attr or FILTER doc.attr != null instead of FILTER HAS(doc, "attr")
+
+!TODO collection ... not found, e.g. access of variable after COLLECT (no longer existing)
