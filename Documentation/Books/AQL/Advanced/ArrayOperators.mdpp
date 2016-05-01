@@ -1,7 +1,5 @@
 !CHAPTER Array Operators
 
-<!-- toc -->
-
 !SUBSECTION Array expansion
 
 In order to access a named attribute from all elements in an array easily, AQL
