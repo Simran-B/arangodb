@@ -190,9 +190,9 @@ def fetch_comments(dirpath):
         for comment in file_comments:
           fh.write("\n<!-- filename: %s -->\n" % filepath)
           for _com in comment:
-            _text = re.sub(r"//(/)+\s*\n", "<br />\n", _com) # place in temporary brs...
-            _text = re.sub(r"///+(\s+\s+)([-\*\d])", r"  \2", _text)
-            _text = re.sub(r"///\s", "", _text)
+            _text = re.sub(r"^\s*\n", "<br />\n", _com) # place in temporary brs...
+            _text = re.sub(r"^\s+([-\*\d])", r"  \1", _text)
+            _text = re.sub(r"^\s", "", _text)
             _text = _text.strip("\n")
             if _text:
               if not shouldIgnoreLine:
