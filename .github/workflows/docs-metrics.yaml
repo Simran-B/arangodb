@@ -1,0 +1,62 @@
+name: Update Metrics Documentation
+
+on:
+  push:
+    branches:
+      - 'devel'
+      - '3.8'
+      - '3.7'
+    paths:
+      - 'Documentation/Metrics/*.yaml'
+      - '!Documentation/Metrics/template.yaml'
+
+concurrency: docs-metrics-${{ github.ref }}
+
+jobs:
+  update-metrics:
+    name: Update Metrics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: arangodb
+      - uses: actions/checkout@v2
+        with:
+          repository: Simran-B/arangodb-docs
+          path: docs
+      - name: Determine version number
+        id: version
+        working-directory: arangodb
+        run: |
+          ARANGO_VERSION=$(head -n1 'ARANGO-VERSION' | grep --only-matching -E '^[1-9]+\.[0-9]+')
+          echo "Found version (major.minor): $ARANGO_VERSION"
+          echo "::set-output name=version::$ARANGO_VERSION"
+      - name: Generate All Metrics Documentation
+        working-directory: arangodb
+        run: |
+          # Perform a check run
+          ./utils/generateAllMetricsDocumentation.py
+          # Generate allMetrics.yaml
+          ./utils/generateAllMetricsDocumentation.py -d
+      - name: Commit Metrics Docs
+        working-directory: docs
+        run: |
+          cp -a ../arangodb/Documentation/Metrics/allMetrics.yaml ./${{ steps.version.outputs.version }}/generated/
+          git add ./${{ steps.version.outputs.version }}/generated/allMetrics.yaml
+          git config user.name '${{ github.actor }}'
+          git config user.email '${{ github.actor }}@users.noreply.github.com'
+          git commit -m 'Update generated metrics docs for ${{ steps.version.outputs.version }}'
+      - uses: peter-evans/create-pull-request@v3
+        id: pr
+        with:
+          path: docs
+          branch: update-metrics-docs-${{ steps.version.outputs.version }}
+          delete-branch: true
+          title: 'Metrics: Update docs ${{ steps.version.outputs.version }}'
+          body: Automatically created PR by workflow '${{ github.workflow }}' from arangodb/arangodb
+          assignees: Simran-B
+          reviewers: Simran-B
+          milestone: ${{ steps.version.outputs.version }}
+      - name: PR info
+        run: |
+          echo "Created PR #${{ steps.pr.outputs.pull-request-number }}: ${{ steps.pr.outputs.pull-request-url }}"
