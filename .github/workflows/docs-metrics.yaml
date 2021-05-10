@@ -49,6 +49,7 @@ jobs:
       - uses: peter-evans/create-pull-request@v3
         id: pr
         with:
+          token: ${{ secrets.METRICS_DOCS }}
           path: docs
           branch: update-metrics-docs-${{ steps.version.outputs.version }}
           delete-branch: true
