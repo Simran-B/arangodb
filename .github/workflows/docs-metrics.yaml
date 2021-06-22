@@ -11,6 +11,8 @@ on:
 
 concurrency: docs-metrics-${{ github.ref }}
 
+permissions: write-all
+
 jobs:
   update-metrics:
     name: Update Metrics
