@@ -11,8 +11,6 @@ on:
 
 concurrency: docs-metrics-${{ github.ref }}
 
-permissions: write-all
-
 jobs:
   update-metrics:
     name: Update Metrics
@@ -51,8 +49,7 @@ jobs:
       - uses: peter-evans/create-pull-request@v3
         id: pr
         with:
-          #token: ${{ secrets.METRICS_DOCS }}
-          token: ${{ github.token }}
+          token: ${{ secrets.METRICS_DOCS }} # PAT required to push to the other repo
           path: docs
           branch: update-metrics-docs-${{ steps.version.outputs.version }}
           delete-branch: true
