@@ -49,7 +49,7 @@ jobs:
       - uses: peter-evans/create-pull-request@v3
         id: pr
         with:
-          token: ${{ secrets.METRICS_DOCS }} # PAT required to push to the other repo
+          token: ${{ secrets.METRICS_DEPLOY_KEY }} # PAT or deploy key required to push to the other repo
           path: docs
           branch: update-metrics-docs-${{ steps.version.outputs.version }}
           delete-branch: true
